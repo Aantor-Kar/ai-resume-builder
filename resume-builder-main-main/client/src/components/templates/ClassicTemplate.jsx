@@ -57,7 +57,7 @@ const ClassicTemplate = ({ data, accentColor }) => {
 
       {/* Professional Summary */}
       {data.professional_summary && (
-        <section className="mb-6">
+        <section className="mb-6 text-wrap">
           <h2
             className="text-xl font-semibold mb-3"
             style={{ color: accentColor }}
