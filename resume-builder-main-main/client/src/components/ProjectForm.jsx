@@ -26,15 +26,15 @@ const ProjectForm = ({ data, onChange }) => {
     <div>
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-900">
+          <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-100">
             Projects
           </h3>
-          <p className="text-sm text-gray-500">Add your projects</p>
+          <p className="text-sm text-slate-400">Add your projects</p>
         </div>
 
         <button
           onClick={addProject}
-          className="flex items-center gap-2 px-3 py-1 text-sm bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
+          className="flex items-center gap-2 px-3 py-1 text-sm bg-cyan-400/15 text-cyan-200 rounded-lg hover:bg-cyan-400/25 transition-colors"
         >
           <Plus className="size-4" />
           Add Project
@@ -45,7 +45,7 @@ const ProjectForm = ({ data, onChange }) => {
         {data.map((project, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-200 rounded-lg space-y-3"
+            className="p-4 border border-slate-800 rounded-lg space-y-3 bg-slate-950/40"
           >
             <div className="flex justify-between items-start">
               <h4>Project #{index + 1}</h4>

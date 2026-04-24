@@ -6,16 +6,20 @@
   font-family: "Outfit", sans-serif;
 }
 
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+}
+
 @layer base {
   button {
     @apply cursor-pointer;
   }
 
   input:not([type="checkbox"]) {
-    @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg;
+    @apply outline-none focus:ring border border-slate-700 bg-slate-950/70 text-slate-100 placeholder:text-slate-500 focus:ring-cyan-500/40 focus:border-cyan-400 rounded-lg;
   }
 
   textarea {
-    @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg resize-none;
+    @apply outline-none focus:ring border border-slate-700 bg-slate-950/70 text-slate-100 placeholder:text-slate-500 focus:ring-cyan-500/40 focus:border-cyan-400 rounded-lg resize-none;
   }
 }

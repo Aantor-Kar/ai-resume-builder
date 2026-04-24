@@ -47,10 +47,10 @@ const PersonalInfoForm = ({
 
   return (
     <div>
-      <h3 className="text-lg font-semibold text-gray-900">
+      <h3 className="text-lg font-semibold text-slate-100">
         Personal Information
       </h3>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-slate-400">
         Get Started with the personal information
       </p>
       <div className="flex items-center gap-2">
@@ -63,10 +63,10 @@ const PersonalInfoForm = ({
                   : URL.createObjectURL(data.image)
               }
               alt="user-image"
-              className="w-16 h-16 rounded-full object-cover mt-5 ring ring-slate-300 hover:opacity-80"
+              className="w-16 h-16 rounded-full object-cover mt-5 ring ring-cyan-300/40 hover:opacity-80"
             />
           ) : (
-            <div className="inline-flex items-center gap-2 mt-5 text-slate-600 hover:text-slate-700 cursor-pointer">
+            <div className="inline-flex items-center gap-2 mt-5 text-slate-400 hover:text-cyan-300 cursor-pointer">
               <User className="size-10 p-2.5 border rounded-full" />
               upload user image
             </div>
@@ -81,7 +81,7 @@ const PersonalInfoForm = ({
         {typeof data.image === "object" && (
           <div className="flex flex-col gap-1 pl-4 text-sm">
             <p>Remove Background</p>
-            <label className="relative inline-flex items-center cursor-pointer text-gray-900 gap-3">
+            <label className="relative inline-flex items-center cursor-pointer text-slate-100 gap-3">
               <input
                 type="checkbox"
                 className="sr-only peer"
@@ -89,7 +89,7 @@ const PersonalInfoForm = ({
                 checked={removeBackground}
               />
 
-              <div className="w-9 h-5 bg-slate-300 rounded-full peer peer-checked:bg-green-600 transition-colors duration-200"></div>
+              <div className="w-9 h-5 bg-slate-700 rounded-full peer peer-checked:bg-cyan-400 transition-colors duration-200"></div>
               <span className="dot absolute left-1 top-1 w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-4"></span>
             </label>
           </div>
@@ -100,7 +100,7 @@ const PersonalInfoForm = ({
         const Icon = field.icon;
         return (
           <div key={field.key} className="space-y-1 mt-5">
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-600">
+            <label className="flex items-center gap-2 text-sm font-medium text-slate-300">
               <Icon className="size-4" />
               {field.label}
               {field.required && <span className="text-red-500">*</span>}
@@ -109,7 +109,7 @@ const PersonalInfoForm = ({
               type={field.type}
               value={data[field.key] || ""}
               onChange={(e) => handleChange(field.key, e.target.value)}
-              className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-sm"
+              className="mt-1 w-full px-3 py-2 rounded-lg outline-none transition-colors text-sm"
               placeholder={`Enter your ${field.label.toLowerCase()}`}
               required={field.required}
             />

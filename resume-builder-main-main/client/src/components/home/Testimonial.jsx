@@ -30,7 +30,7 @@ const Testimonial = () => {
   ];
 
   const CreateCard = ({ card }) => (
-    <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+    <div className="p-4 rounded-lg mx-4 border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20 hover:border-cyan-400/30 transition-all duration-200 w-72 shrink-0">
       <div className="flex gap-2">
         <img
           className="size-11 rounded-full"
@@ -39,9 +39,9 @@ const Testimonial = () => {
         />
         <div className="flex flex-col">
           <div className="flex items-center gap-1">
-            <p>{card.name}</p>
+            <p className="text-slate-100">{card.name}</p>
             <svg
-              className="mt-0.5 fill-green-500"
+              className="mt-0.5 fill-cyan-300"
               width="12"
               height="12"
               viewBox="0 0 12 12"
@@ -57,8 +57,9 @@ const Testimonial = () => {
           <span className="text-xs text-slate-500">{card.handle}</span>
         </div>
       </div>
-      <p className="text-sm py-4 text-gray-800">
-        Radiant made undercutting all of our competitors an absolute breeze.
+      <p className="text-sm py-4 text-slate-300">
+        ResMakr helped me turn a scattered work history into a focused resume
+        that felt sharp and current.
       </p>
     </div>
   );
@@ -69,35 +70,35 @@ const Testimonial = () => {
         id="testimonials"
         className="flex flex-col items-center my-10 scroll-mt-12"
       >
-        <div className="flex items-center gap-2 text-sm text-green-600 bg-green-400/10 rounded-full px-6 py-1.5">
-          <BookUser className="size-4.5 stroke-green-600" />
+        <div className="flex items-center gap-2 text-sm text-cyan-200 bg-cyan-400/10 border border-cyan-400/20 rounded-full px-6 py-1.5">
+          <BookUser className="size-4.5 stroke-cyan-300" />
           <span>Testimonials</span>
         </div>
 
         <Title
-          title="Don't just take our words"
+          title="Don't just take our word"
           description="Hear what our users say about us. We're always looking for ways to improve. If you have a positive experience with us, leave a review."
         />
       </div>
 
       <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
-        <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
+        <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-slate-950 to-transparent"></div>
         <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5">
           {[...cardsData, ...cardsData].map((card, index) => (
             <CreateCard key={index} card={card} />
           ))}
         </div>
-        <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>
+        <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-slate-950 to-transparent"></div>
       </div>
 
       <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
-        <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
+        <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-slate-950 to-transparent"></div>
         <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5">
           {[...cardsData, ...cardsData].map((card, index) => (
             <CreateCard key={index} card={card} />
           ))}
         </div>
-        <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>
+        <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-slate-950 to-transparent"></div>
       </div>
 
       <style>{`

@@ -10,7 +10,7 @@ const Features = () => {
       id="features"
       className="flex flex-col items-center my-10 scroll-mt-12"
     >
-      <div className="flex items-center gap-2 text-sm text-green-600 bg-green-400/10 rounded-full px-6 py-1.5">
+      <div className="flex items-center gap-2 text-sm text-cyan-200 bg-cyan-400/10 border border-cyan-400/20 rounded-full px-6 py-1.5">
         <Zap width={14} />
         <span>Simple Process</span>
       </div>
@@ -22,7 +22,7 @@ const Features = () => {
 
       <div className="flex flex-col md:flex-row items-center justify-center xl:-mt-10">
         <img
-          className="max-w-2xl w-full xl:-ml-32"
+          className="max-w-2xl w-full xl:-ml-32 opacity-90 saturate-125 drop-shadow-2xl"
           src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/features/group-image-1.png"
           alt=""
         />
@@ -37,8 +37,8 @@ const Features = () => {
             }
           >
             <div
-              className={`p-6 group-hover:bg-violet-100 border border-transparent group-hover:border-violet-300  flex gap-4 rounded-xl transition-colors ${
-                !isHover ? "border-violet-300 bg-violet-100" : ""
+              className={`p-6 group-hover:bg-violet-400/10 border border-transparent group-hover:border-violet-400/40  flex gap-4 rounded-xl transition-colors ${
+                !isHover ? "border-violet-400/40 bg-violet-400/10" : ""
               }`}
             >
               <svg
@@ -57,17 +57,18 @@ const Features = () => {
                 <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
               </svg>
               <div className="space-y-2">
-                <h3 className="text-base font-semibold text-slate-700">
-                  Real-Time Analytics
+                <h3 className="text-base font-semibold text-slate-100">
+                  Guided AI Writing
                 </h3>
-                <p className="text-sm text-slate-600 max-w-xs">
-                  Get instant insights into your finances with live dashboards.
+                <p className="text-sm text-slate-400 max-w-xs">
+                  Turn rough career notes into polished, recruiter-ready resume
+                  language.
                 </p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center gap-6 max-w-md group cursor-pointer">
-            <div className="p-6 group-hover:bg-green-100 border border-transparent group-hover:border-green-300 flex gap-4 rounded-xl transition-colors">
+            <div className="p-6 group-hover:bg-cyan-400/10 border border-transparent group-hover:border-cyan-400/40 flex gap-4 rounded-xl transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -78,25 +79,26 @@ const Features = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="size-6 stroke-green-600"
+                className="size-6 stroke-cyan-300"
               >
                 <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
                 <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
               </svg>
               <div className="space-y-2">
-                <h3 className="text-base font-semibold text-slate-700">
-                  Bank-Grade Security
+                <h3 className="text-base font-semibold text-slate-100">
+                  Flexible Templates
                 </h3>
-                <p className="text-sm text-slate-600 max-w-xs">
-                  End-to-end encryption, 2FA, compliance with GDPR standards.
+                <p className="text-sm text-slate-400 max-w-xs">
+                  Switch between professional layouts and accents without
+                  rebuilding your resume.
                 </p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center gap-6 max-w-md group cursor-pointer">
-            <div className="p-6 group-hover:bg-orange-100 border border-transparent group-hover:border-orange-300 flex gap-4 rounded-xl transition-colors">
+            <div className="p-6 group-hover:bg-amber-400/10 border border-transparent group-hover:border-amber-400/40 flex gap-4 rounded-xl transition-colors">
               <svg
-                className="size-6 stroke-orange-600"
+                className="size-6 stroke-amber-300"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -112,12 +114,12 @@ const Features = () => {
                 <path d="m7 10 5 5 5-5" />
               </svg>
               <div className="space-y-2">
-                <h3 className="text-base font-semibold text-slate-700">
-                  Customizable Reports
+                <h3 className="text-base font-semibold text-slate-100">
+                  One-Click Export
                 </h3>
-                <p className="text-sm text-slate-600 max-w-xs">
-                  Export professional, audit-ready financial reports for tax or
-                  internal review.
+                <p className="text-sm text-slate-400 max-w-xs">
+                  Save, share, and download a clean resume when it is ready to
+                  send.
                 </p>
               </div>
             </div>

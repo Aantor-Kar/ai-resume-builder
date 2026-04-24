@@ -28,7 +28,7 @@ const Layout = () => {
   return (
     <div>
       {user ? (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-slate-950 text-slate-100">
           <Navbar />
           <Outlet />
         </div>

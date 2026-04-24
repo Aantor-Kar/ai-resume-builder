@@ -7,7 +7,7 @@ import Testimonial from "../components/home/Testimonial";
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,#164E63_0,#020617_34%,#020617_100%)] text-slate-100">
       <Banner />
       <Hero />
       <Features />

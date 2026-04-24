@@ -57,15 +57,15 @@ const ExperienceForm = ({ data, onChange }) => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-900">
+          <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-100">
             Professional Experience
           </h3>
-          <p className="text-sm text-gray-500">Add your job experience</p>
+          <p className="text-sm text-slate-400">Add your job experience</p>
         </div>
 
         <button
           onClick={addExperience}
-          className="flex items-center gap-2 px-3 py-1 text-sm bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
+          className="flex items-center gap-2 px-3 py-1 text-sm bg-cyan-400/15 text-cyan-200 rounded-lg hover:bg-cyan-400/25 transition-colors"
         >
           <Plus className="size-4" />
           Add Experience
@@ -73,8 +73,8 @@ const ExperienceForm = ({ data, onChange }) => {
       </div>
 
       {data.length === 0 ? (
-        <div className="text-center py-8 text-gray-500">
-          <Briefcase className="w-12 h-12 mx-auto mb-3 text-gray-300" />
+        <div className="text-center py-8 text-slate-500">
+          <Briefcase className="w-12 h-12 mx-auto mb-3 text-slate-600" />
           <p>No work experience added yet.</p>
           <p className="text-sm">Click "Add Experience" to get started.</p>
         </div>
@@ -83,7 +83,7 @@ const ExperienceForm = ({ data, onChange }) => {
           {data.map((experience, index) => (
             <div
               key={index}
-              className="p-4 border border-gray-200 rounded-lg space-y-3"
+              className="p-4 border border-slate-800 rounded-lg space-y-3 bg-slate-950/40"
             >
               <div className="flex justify-between items-start">
                 <h4>Experience #{index + 1}</h4>
@@ -132,7 +132,7 @@ const ExperienceForm = ({ data, onChange }) => {
                   }
                   type="month"
                   disabled={experience.is_current}
-                  className="px-3 py-2 text-sm rounded-lg disabled:bg-gray-100"
+                  className="px-3 py-2 text-sm rounded-lg disabled:bg-slate-800"
                 />
               </div>
 
@@ -147,16 +147,16 @@ const ExperienceForm = ({ data, onChange }) => {
                       e.target.checked ? true : false
                     );
                   }}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  className="rounded border-slate-600 text-cyan-400 focus:ring-cyan-500"
                 />
-                <span className="text-sm text-gray-700">
+                <span className="text-sm text-slate-300">
                   Currently working here
                 </span>
               </label>
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium text-gray-700">
+                  <label className="text-sm font-medium text-slate-300">
                     Job Description
                   </label>
                   <button
@@ -166,7 +166,7 @@ const ExperienceForm = ({ data, onChange }) => {
                       !experience.position ||
                       !experience.company
                     }
-                    className="flex items-center gap-1 px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded hover:bg-purple-200 transition-colors disabled:opacity-50"
+                    className="flex items-center gap-1 px-2 py-1 text-xs bg-violet-400/15 text-violet-200 rounded hover:bg-violet-400/25 transition-colors disabled:opacity-50"
                   >
                     {generatingIndex === index ? (
                       <Loader2 className="w-3 h-3 animate-spin" />
@@ -185,7 +185,7 @@ const ExperienceForm = ({ data, onChange }) => {
                     updateExperience(index, "description", e.target.value)
                   }
                   rows={4}
-                  className="w-full text-sm px-3 py-2 rounded-lg resize-none border outline-none focus:ring focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full text-sm px-3 py-2 rounded-lg resize-none outline-none transition-colors"
                   placeholder="Describe your key responsibilities and achievements..."
                 />
               </div>

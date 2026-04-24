@@ -28,15 +28,15 @@ const EducationForm = ({ data, onChange }) => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-900">
+          <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-100">
             Education
           </h3>
-          <p className="text-sm text-gray-500">Add your education details</p>
+          <p className="text-sm text-slate-400">Add your education details</p>
         </div>
 
         <button
           onClick={addEducation}
-          className="flex items-center gap-2 px-3 py-1 text-sm bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
+          className="flex items-center gap-2 px-3 py-1 text-sm bg-cyan-400/15 text-cyan-200 rounded-lg hover:bg-cyan-400/25 transition-colors"
         >
           <Plus className="size-4" />
           Add Education
@@ -44,8 +44,8 @@ const EducationForm = ({ data, onChange }) => {
       </div>
 
       {data.length === 0 ? (
-        <div className="text-center py-8 text-gray-500">
-          <GraduationCap className="w-12 h-12 mx-auto mb-3 text-gray-300" />
+        <div className="text-center py-8 text-slate-500">
+          <GraduationCap className="w-12 h-12 mx-auto mb-3 text-slate-600" />
           <p>No education added yet.</p>
           <p className="text-sm">Click "Add Education" to get started.</p>
         </div>
@@ -54,7 +54,7 @@ const EducationForm = ({ data, onChange }) => {
           {data.map((education, index) => (
             <div
               key={index}
-              className="p-4 border border-gray-200 rounded-lg space-y-3"
+              className="p-4 border border-slate-800 rounded-lg space-y-3 bg-slate-950/40"
             >
               <div className="flex justify-between items-start">
                 <h4>Education #{index + 1}</h4>
